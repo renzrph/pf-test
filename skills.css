@@ -29,6 +29,10 @@
   background-image: var(--navy-blue-black-gradient);
   padding: 4.5rem;
   border-radius: 100% 0% 90% 10% / 0% 91% 9% 100%;
+  width: 100%;
+  max-width: 450px;
+  display: grid;
+  place-items: center;
 }
 
 .skills-container ul {
