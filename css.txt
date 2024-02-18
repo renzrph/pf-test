@@ -1,0 +1,370 @@
+@import url("https://fonts.cdnfonts.com/css/wotfard");
+@import url("https://fonts.cdnfonts.com/css/frosty-fizz");
+@import url("https://fonts.cdnfonts.com/css/flapdoodle");
+
+:root {
+  --orange: #ffcc80;
+  --cornflower-blue: #6495ed;
+  --darker-cornflower-blue: #6494edde;
+  --light-blue: #87ceeb;
+  --navy-blue: #001f3f;
+  --sage-green: #9bc995;
+  --white: #ffffff;
+  --dark-gray: #222222;
+  --solid-black: #000000;
+  --navy-blue-black-gradient: linear-gradient(
+    45deg,
+    hsl(210deg 100% 12%) 5%,
+    hsl(211deg 100% 12%) 13%,
+    hsl(212deg 100% 11%) 25%,
+    hsl(213deg 100% 11%) 37%,
+    hsl(215deg 100% 10%) 47%,
+    hsl(216deg 100% 10%) 57%,
+    hsl(218deg 100% 10%) 67%,
+    hsl(221deg 100% 9%) 75%,
+    hsl(224deg 100% 9%) 83%,
+    hsl(229deg 100% 8%) 90%,
+    hsl(234deg 100% 8%) 95%,
+    hsl(0deg 0% 0%) 100%
+  );
+
+  /* font family */
+  --wotfard: "Wotfard", sans-serif;
+  --frosty-fizz: "FROSTY FIZZ", sans-serif;
+
+  /* font size */
+  --header-logo: 1.75rem;
+  --nav: 1.25rem;
+  --h1-about-me: 2.5rem;
+  --p-about-me: 1.4rem;
+  --socials-hero: 1.5rem;
+  --section-title: 3rem;
+  --skills-heading: 1.75rem;
+  --skills-list: 1.5rem;
+  --download: 1.2rem;
+  --project-name: 1.3rem;
+  --view-website: 1.2rem;
+  --contact-me-btns: 1.5rem;
+  --footer: 1.2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: var(--wotfard);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+  background-image: var(--navy-blue-black-gradient);
+  color: var(--white);
+  width: 100%;
+  max-width: 1680px;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+header strong {
+  padding: 1rem 2rem;
+  font-size: var(--header-logo);
+  font-family: "Flapdoodle", sans-serif;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 1rem 2rem;
+  gap: 25px;
+}
+
+ul a {
+  text-decoration: none;
+  font-size: var(--nav);
+  color: var(--white);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ABOUT ME */
+
+.about-me-section {
+  display: flex;
+  padding: 2rem;
+}
+
+.about-me-info {
+  width: 50vw;
+  flex: 1;
+}
+
+.about-me-info h1 {
+  text-align: center;
+  padding: 3rem 0 1rem 0;
+  font-size: var(--h1-about-me);
+  color: var(--white);
+}
+
+.custom-underline {
+  position: relative;
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 5px; /* underline thickness */
+  background-color: var(--orange);
+}
+
+.about-me-info p {
+  text-align: center;
+  font-size: var(--p-about-me);
+  padding: 1.5rem;
+  color: var(--white);
+}
+
+.about-me-image {
+  flex-direction: column;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-image img {
+  margin: 1.5rem 0;
+  height: 300px;
+  width: 300px;
+  border-radius: 21% 79% 16% 84% / 77% 16% 84% 23%;
+}
+
+.socials-hero a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: var(--socials-hero);
+  padding: 0 0.5rem;
+}
+
+.wave-image {
+  display: block;
+  height: 125px;
+  width: 100vw;
+}
+
+/* SKILLS */
+
+.skills-section {
+  background-color: var(--solid-black);
+  color: var(--white);
+  padding: 0 4rem 4rem 4rem;
+}
+
+.skills-section h2 {
+  text-align: center;
+  font-size: var(--section-title);
+  letter-spacing: 0.5rem;
+  color: var(--white);
+}
+
+.skills-container {
+  color: var(--white);
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 10rem;
+}
+
+.skills-container h3 {
+  margin-bottom: 0.75rem;
+  font-size: var(--skills-heading);
+}
+
+.skills-container div {
+  background-image: var(--navy-blue-black-gradient);
+  padding: 4.5rem;
+  border-radius: 100% 0% 90% 10% / 0% 91% 9% 100%;
+}
+
+.skills-container ul {
+  list-style: none;
+  font-size: var(--skills-list);
+}
+
+.skills-container li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.5rem 0;
+}
+
+.tech-icons {
+  height: 50px;
+  width: 50px;
+}
+
+/* RESUME */
+.resume-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2.5rem 0;
+}
+
+.resume-section h3 {
+  letter-spacing: 0.5rem;
+  font-size: var(--section-title);
+}
+
+.resume-section a {
+  background-color: var(--cornflower-blue);
+  color: var(--white);
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: var(--download);
+}
+
+.resume-section a:hover {
+  background-color: var(--darker-cornflower-blue);
+}
+
+/* PROJECTS */
+
+.projects-section {
+  background-color: var(--solid-black);
+  padding: 4rem;
+}
+
+.projects-section h3 {
+  text-align: center;
+  padding: 1rem;
+  letter-spacing: 0.5rem;
+  font-size: var(--section-title);
+}
+
+.projects-container {
+  background-color: var(--dark-gray);
+  border-radius: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.projects-container div {
+  height: 350px;
+  width: 400px;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: var(--navy-blue);
+}
+
+.projects-container div img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 200px;
+  width: 100%;
+}
+
+.project-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.projects-container h4 {
+  padding: 1.25rem;
+  font-size: var(--project-name);
+}
+
+.projects-container a {
+  background-color: var(--cornflower-blue);
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  font-size: var(--view-website);
+  text-decoration: none;
+  color: var(--white);
+}
+
+.projects-container a:hover {
+  background-color: var(--darker-cornflower-blue);
+}
+
+/* CONTACTS */
+.contact-section {
+  padding: 3rem 0 3.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section h3 {
+  font-size: var(--section-title);
+  padding: 1rem;
+  letter-spacing: 0.5rem;
+}
+
+.contact-section div a {
+  padding: 0 1rem;
+  color: var(--white);
+  text-decoration: none;
+  font-size: var(--contact-me-btns);
+}
+
+.contact-section div a:hover {
+  color: var(--cornflower-blue);
+}
+
+/* FOOTER */
+
+footer {
+  padding: 1rem;
+  font-size: var(--footer);
+  text-align: center;
+  background-color: var(--solid-black);
+}
+
+.socials {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1.25rem;
+}
+
+.socials-footer a {
+  padding: 0.75rem;
+  font-size: var(--footer);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.socials a:hover {
+  color: var(--cornflower-blue);
+}
+
+/* Tablet View */
+
+/* Mobile View */
