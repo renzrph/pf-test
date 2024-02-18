@@ -28,6 +28,7 @@
 .menu-items {
   order: 2;
   display: flex;
+  text-wrap: nowrap;
 }
 
 .logo {
