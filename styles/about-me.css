@@ -58,6 +58,7 @@
   font-size: var(--socials-hero);
   padding: 0 0.5rem;
   text-wrap: nowrap;
+  transition: color 0.3s ease-in-out;
 }
 
 .wave-image {
